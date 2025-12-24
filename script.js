@@ -106,3 +106,34 @@ const Reloadbtn = document.getElementsByClassName("Reload")[0];
 Reloadbtn.addEventListener("click", () => {
     // window.location.reload();
 });
+
+let startX = 0;
+let startY = 0;
+
+canvas.addEventListener("touchstart", (e) => {
+    startX = e.touchestart[0].clientX;
+    startY = e.touchestart[0].clientY;
+})
+
+canvas.addEventListener("touchend" , (e) => {
+
+    let endX = e.changedTouches[0].clientX;
+    let endY = e.changedTouches[0].clientY;
+
+    let dx = endX - startX;
+    let dy = endY - startY;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        if (dx > 0 && direction !== "LEFT") {
+            direction = "RIGHT";
+        } else if (dx < 0 && direction !== "RIGHT") {
+            direction = "LEFT";
+        }
+    } else {
+        if (dy > 0 && direction !== "UP") {
+            direction = "DOWN";
+        } else if (dy < 0 && direction !== "DOWN") {
+            direction = "UP";
+        }
+    }
+})
