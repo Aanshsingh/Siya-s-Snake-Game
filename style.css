@@ -1,0 +1,39 @@
+body{background: rgb(91, 5, 204);
+color: white;
+font-family: Arial, Helvetica, sans-serif;}
+
+.heading{display: flex;
+align-items: center;
+justify-content: center;}
+
+.score{font-weight: bolder;
+font-size: larger  ;}
+
+canvas{
+background-color: #020617;
+border: 2px solid #38bdf8;
+margin-top: 20px;
+box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(244, 246, 248, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+.game{display: flex;
+align-items: center;
+justify-content: center;}
+/* 
+.Reload{
+     border: 1px;
+    width: 100px;
+    border-radius: 10px;
+    background: rgb(6, 31, 108);
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.Reload:hover{
+    background-color: rgb(11, 135, 197);
+} */
